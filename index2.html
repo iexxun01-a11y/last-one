@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>강남 도깨비 — 프리미엄 멤버십</title>
+<title>강남 쩜오 — 프리미엄 멤버십</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet" />
@@ -698,6 +698,163 @@ section { position: relative; overflow: hidden; }
   border-top: 1px solid rgba(201,168,76,0.15);
 }
 
+
+/* ===== SECTION VISIT ===== */
+#visit-intro {
+  padding: 130px 24px;
+  background: var(--dark-2);
+  position: relative;
+  overflow: hidden;
+}
+.vi-bg-text {
+  position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(6rem, 14vw, 14rem);
+  font-weight: 900; letter-spacing: 0.1em;
+  color: rgba(201,168,76,0.03);
+  white-space: nowrap; pointer-events: none; user-select: none;
+  text-transform: uppercase;
+}
+.vi-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 2; }
+.vi-header { text-align: center; margin-bottom: 80px; }
+.vi-headline {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(1.7rem, 4.5vw, 3rem);
+  font-weight: 700; line-height: 1.4; letter-spacing: 0.01em;
+  margin-bottom: 20px;
+}
+.vi-subline {
+  font-size: 0.95rem; line-height: 2; letter-spacing: 0.04em;
+  color: rgba(232,224,208,0.55); max-width: 580px; margin: 0 auto 36px;
+}
+.vi-cards {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 2px; margin-bottom: 80px;
+}
+.vi-card {
+  padding: 52px 36px;
+  background: var(--dark-4);
+  position: relative; text-align: center;
+  transition: all 0.4s;
+  border: var(--border-gold);
+  overflow: hidden;
+}
+.vi-card::before {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+  background: var(--gold-grad);
+  transform: scaleX(0); transition: transform 0.4s;
+  transform-origin: left;
+}
+.vi-card:hover::before { transform: scaleX(1); }
+.vi-card:hover {
+  background: rgba(201,168,76,0.05);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 30px rgba(201,168,76,0.07);
+  border-color: rgba(201,168,76,0.45);
+}
+.vi-card-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem; font-weight: 900; line-height: 1;
+  background: var(--gold-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  margin-bottom: 12px; display: block; opacity: 0.35;
+}
+.vi-card-icon { font-size: 2rem; margin-bottom: 18px; display: block; }
+.vi-card-title {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1.05rem; font-weight: 600; margin-bottom: 14px;
+  background: var(--gold-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.vi-card-text {
+  font-size: 0.85rem; line-height: 1.95;
+  color: rgba(232,224,208,0.6); letter-spacing: 0.02em;
+}
+.vi-quote-block {
+  max-width: 820px; margin: 0 auto 80px;
+  padding: 52px 60px;
+  background: var(--dark-4);
+  border: var(--border-gold);
+  border-left: 3px solid var(--gold-1);
+  position: relative; text-align: center;
+}
+.vi-quote-block::before {
+  content: "\275D";
+  position: absolute; top: -22px; left: 50%; transform: translateX(-50%);
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem; line-height: 1;
+  padding: 0 16px;
+  background: var(--gold-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.vi-quote-text {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+  line-height: 1.9; font-weight: 500; letter-spacing: 0.03em;
+  color: rgba(232,224,208,0.88); margin-bottom: 20px;
+}
+.vi-quote-attr {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold-1);
+}
+.vi-cta-block {
+  text-align: center; padding: 72px 40px;
+  background: var(--dark-4);
+  border: var(--border-gold);
+  max-width: 820px; margin: 0 auto;
+  position: relative; overflow: hidden;
+}
+.vi-cta-block::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.06) 0%, transparent 65%);
+}
+.vi-cta-eyebrow {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.72rem; letter-spacing: 0.35em; text-transform: uppercase;
+  color: var(--gold-1); margin-bottom: 20px; display: block;
+}
+.vi-cta-main {
+  font-family: 'Noto Serif KR', serif;
+  font-size: clamp(1.4rem, 3.5vw, 2.1rem);
+  font-weight: 700; line-height: 1.5; margin-bottom: 14px;
+  position: relative; z-index: 2;
+}
+.vi-cta-sub {
+  font-size: 0.9rem; line-height: 2; letter-spacing: 0.04em;
+  color: rgba(232,224,208,0.55); margin-bottom: 40px;
+  position: relative; z-index: 2;
+}
+.vi-cta-features {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 14px; margin-bottom: 44px;
+  position: relative; z-index: 2;
+}
+.vi-cta-feature {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 22px;
+  border: var(--border-gold);
+  background: rgba(201,168,76,0.05);
+  font-size: 0.8rem; letter-spacing: 0.06em;
+  color: rgba(232,224,208,0.75);
+}
+.vi-cta-feature-dot {
+  width: 4px; height: 4px;
+  background: var(--gold-2); border-radius: 50%;
+  box-shadow: 0 0 6px rgba(201,168,76,0.7); flex-shrink: 0;
+}
+.vi-btn-wrap { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 2; }
+.vi-note {
+  margin-top: 20px; font-size: 0.75rem;
+  color: rgba(232,224,208,0.3); letter-spacing: 0.06em;
+  position: relative; z-index: 2;
+}
+@media (max-width: 768px) {
+  .vi-cards { grid-template-columns: 1fr; gap: 16px; }
+  .vi-quote-block { padding: 40px 24px; }
+  .vi-cta-block { padding: 48px 20px; }
+}
+
 /* ===== FOOTER ===== */
 footer {
   background: #000; padding: 48px 24px;
@@ -846,7 +1003,7 @@ footer {
 
 <!-- NAV -->
 <nav id="navbar">
-  <a class="nav-logo" href="#">GANGNAM DOKKAEBI</a>
+  <a class="nav-logo" href="#">STANDARD OF GANGNAM</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#plan-a">Signature</a></li>
@@ -868,7 +1025,7 @@ footer {
   <a href="#plan-b" onclick="closeMobile()">Black</a>
   <a href="#process" onclick="closeMobile()">Process</a>
   <a href="#faq" onclick="closeMobile()">FAQ</a>
-  <a href="#final-cta" onclick="closeMobile()">멤버십 상담</a>
+  <a href="#final-cta" onclick="closeMobile()">상담문의</a>
 </div>
 
 <!-- SECTION 0 — HERO -->
@@ -881,14 +1038,14 @@ footer {
 
   <div class="hero-content">
     <div class="hero-emblem fade-in">
-      <div class="hero-emblem-inner">GD</div>
+      <div class="hero-emblem-inner">G</div>
     </div>
 
     <span class="hero-sub-label fade-up">Premium Membership · Gangnam</span>
 
     <h1 class="hero-title fade-up fade-up-delay-1">
       <span class="line1">강남의 절대적 기준</span>
-      <span class="line2">강남 도깨비</span>
+      <span class="line2">강남 쩜오</span>
     </h1>
 
     <div class="hero-tagline-divider fade-in fade-up-delay-2"></div>
@@ -899,7 +1056,7 @@ footer {
 
     <p class="hero-copy-sub fade-up fade-up-delay-3">
       불확실한 비용, 애매한 기준, 과장된 약속.<br>
-      이제는 월정액멤버십 운영으로 강남의 밤을<br>
+      이제는 정찰제·멤버십 운영으로, 강남의 밤을<br>
       정돈된 경험으로 바꿉니다.
     </p>
 
@@ -955,35 +1112,36 @@ footer {
       <div class="deco-line"></div>
     </div>
     <span class="section-label fade-up">The Standard of Gangnam</span>
-    <h2 class="section-title fade-up fade-up-delay-1">강남의 중심 <br><span class="gold-text">"도깨비" 회사 소개</span></h2>
+    <h2 class="section-title fade-up fade-up-delay-1">우리가 발견한<br><span class="gold-text">세 가지 문제</span></h2>
     <div class="gold-divider-sm fade-in"></div>
   </div>
 
   <div class="pain-grid">
     <div class="pain-card fade-up">
       <span class="pain-card-icon">◈</span>
-      <div class="pain-card-title">강남의 숨은 요물</div>
+      <div class="pain-card-title">기준 없는 시장</div>
       <p class="pain-card-text">
-        도깨비의 가장 큰 무기는 아름다운 그녀들 입니다.<br>
-        강남의 밤을 포기할 수 없는 도깨비.<br>
+        이용자는 매번 다른 조건과 비용을 마주합니다.<br>
+        동일한 서비스, 전혀 다른 경험.<br>
+        기준 없는 시장이 만들어낸 혼란입니다.
       </p>
     </div>
     <div class="pain-card fade-up fade-up-delay-1">
       <span class="pain-card-icon">◈</span>
-      <div class="pain-card-title">강력한 매력</div>
+      <div class="pain-card-title">불투명한 비용</div>
       <p class="pain-card-text">
-        이렇게 긴 시간 여유롭게 즐길 수 있다는 것.<br>
-        눈을 뗄 수 없는 쫀득학 색기 넘치는 그녀들.<br>
-        도깨비는 한 줄기 빛과 같은 존재입니다.
+        결국 얼마가 드는지, 마지막까지 불명확합니다.<br>
+        시작은 화려하지만 끝은 항상<br>
+        예상치 못한 비용으로 마무리됩니다.
       </p>
     </div>
     <div class="pain-card fade-up fade-up-delay-2">
       <span class="pain-card-icon">◈</span>
-      <div class="pain-card-title">독보적인 강점</div>
+      <div class="pain-card-title">무너진 신뢰/div>
       <p class="pain-card-text">
-        한결 같이 참하고 아름다운 비주얼을 자랑하는 도깨비의 그녀들.<br>
-        젊음이 무기인 독보적인 쫀득한 매력.<br>
-        은근학 흘러나오는 농염한 색기까지.
+        말과 현실의 간극이 신뢰를 무너뜨립니다.<br>
+        과장된 약속, 흐릿한 경계.<br>
+        신뢰는 명확함에서 비롯됩니다.
       </p>
     </div>
   </div>
@@ -994,9 +1152,115 @@ footer {
       <div class="deco-diamond"></div>
       <div class="deco-line"></div>
     </div>
-    <p class="about-closing-line1">오랜 시간 대화하고 싶을 때,</p>
-    <span class="about-closing-line2">가장 완벽한 해답이 되어주는 곳.</span>
+    <p class="about-closing-line1">기준 없는 시장을 바꾼 강남 쩜오는</p>
+    <span class="about-closing-line2">이제는 가장 완벽한 해답이 되어줍니다.</span>
     <div class="about-closing-badge">현명한 당신의 밤을 위한 또 하나의 히든카드</div>
+  </div>
+</section>
+
+
+<div class="gold-divider"></div>
+
+<!-- SECTION 1-B — 방문 유도 -->
+<section id="visit-intro">
+  <div class="vi-bg-text" aria-hidden="true">VISIT</div>
+
+  <div class="vi-inner">
+
+    <div class="vi-header">
+      <div class="deco-line-set fade-in">
+        <div class="deco-line"></div>
+        <div class="deco-diamond"></div>
+        <div class="deco-line"></div>
+      </div>
+      <span class="section-label fade-up">Before Membership · First Experience</span>
+      <h2 class="vi-headline fade-up fade-up-delay-1">
+        결정 전에, <span class="gold-text">먼저 느껴보세요.</span>
+      </h2>
+      <div class="gold-divider-sm fade-in"></div>
+      <p class="vi-subline fade-up fade-up-delay-2">
+        멤버십은 확신이 생겼을 때 시작해도 늦지 않습니다.<br>
+        먼저 어떤 공간인지, 직접 경험하세요.
+      </p>
+    </div>
+
+    <div class="vi-cards">
+      <div class="vi-card fade-up">
+        <span class="vi-card-num">01</span>
+        <span class="vi-card-icon">✦</span>
+        <div class="vi-card-title">기준이 다른 공간</div>
+        <p class="vi-card-text">
+          처음 방문하는 순간부터<br>
+          다름을 느끼게 됩니다.<br>
+          비교할 수 없는 수준의<br>
+          서비스와 분위기, 직접 확인하세요.
+        </p>
+      </div>
+      <div class="vi-card fade-up fade-up-delay-1">
+        <span class="vi-card-num">02</span>
+        <span class="vi-card-icon">◈</span>
+        <div class="vi-card-title">투명한 첫 경험</div>
+        <p class="vi-card-text">
+          방문 전 비용과 조건을 먼저 안내합니다.<br>
+          숨겨진 금액도, 애매한 말도 없이.<br>
+          처음 만남부터 우리의 원칙은<br>
+          투명함 하나입니다.
+        </p>
+      </div>
+      <div class="vi-card fade-up fade-up-delay-2">
+        <span class="vi-card-num">03</span>
+        <span class="vi-card-icon">◇</span>
+        <div class="vi-card-title">경험 후 결정하세요</div>
+        <p class="vi-card-text">
+          방문 경험이 멤버십의 가치를<br>
+          스스로 증명합니다.<br>
+          와보면 압니다.<br>
+          왜 다시 찾게 되는지를.
+        </p>
+      </div>
+    </div>
+
+    <div class="vi-quote-block fade-up">
+      <p class="vi-quote-text">
+        "일반 방문으로 시작해서<br>
+        멤버십으로 마무리되는 분들이 대부분입니다.<br>
+        한 번 경험하면, 이유를 알게 됩니다."
+      </p>
+      <span class="vi-quote-attr">— Gangnam Member Relations</span>
+    </div>
+
+    <div class="vi-cta-block fade-up">
+      <span class="vi-cta-eyebrow">General Visit · No Commitment Required</span>
+      <h3 class="vi-cta-main">
+        강남 쩜오, <span class="gold-text">오늘 밤 방문해보세요.</span>
+      </h3>
+      <p class="vi-cta-sub">
+        멤버십 가입 없이도 방문 가능합니다.<br>
+        복잡한 절차 없이, 당신이 필요한 순간 언제나 이곳은 열려 있습니다.
+      </p>
+
+      <div class="vi-cta-features">
+        <div class="vi-cta-feature">
+          <div class="vi-cta-feature-dot"></div>
+          사전 방문 비용·조건 안내
+        </div>
+        <div class="vi-cta-feature">
+          <div class="vi-cta-feature-dot"></div>
+          프라이빗 동선 배려
+        </div>
+        <div class="vi-cta-feature">
+          <div class="vi-cta-feature-dot"></div>
+          멤버십 연계 안내 가능
+        </div>
+      </div>
+
+      <div class="vi-btn-wrap">
+        <a href="#final-cta" class="btn-gold">방문 문의하기</a>
+        <a href="#process" class="btn-outline">이용 절차 보기</a>
+      </div>
+      <p class="vi-note">※ 문의사항이 있다면 편히 연락주세요.</p>
+    </div>
+
   </div>
 </section>
 
@@ -1016,20 +1280,21 @@ footer {
     <span class="philosophy-quote-deco fade-in" aria-hidden="true">❝</span>
 
     <p class="philosophy-main fade-up">
-      우리가 만드는 기준은<br>
-      <span class="gold-text">'과시'가 아니라 '관리'</span>입니다.
+      불필요한 에너지는 줄이고<br>
+      <span class="gold-text">필요한 순간을 정확히 채우는 관리의 미학</span>
     </p>
 
     <div class="gold-divider-center fade-in"></div>
 
     <p class="philosophy-sub fade-up fade-up-delay-1">
-      불필요한 소음은 줄이고, 필요한 순간에 정확히 채우는 운영.<br>
+      불필요한 소음은 줄이고,<br>
+      필요한 순간에 정확히 채우는 운영.<br>
       당신의 시간을 아끼는 것이 곧 품격입니다.
     </p>
 
     <div style="margin-top:48px" class="fade-up fade-up-delay-2">
       <span style="font-family:'Playfair Display',serif;font-size:0.75rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold-1);">
-        Gangnam Dokkaebi Premium Membership
+        Gangnam Premium Membership
       </span>
     </div>
   </div>
@@ -1050,8 +1315,7 @@ footer {
         <span class="gold-text">Signature</span><br>
       </h2>
       <span class="plan-price fade-up fade-up-delay-2">₩10,000,000</span>
-      <span class="plan-price-label fade-up fade-up-delay-2">/ 월정액 · VAT 별도</span>
-      <span class="plan-price-label fade-up fade-up-delay-2">/ 법인 비용처리 가능 · VAT 리베이트 가능</span>
+      <span class="plan-price-label fade-up fade-up-delay-2">/ 월정액 · VAT 별도 · VAT 리에비트 가능 · 법인 비용처리 가능</span>
       <div class="gold-divider-sm" style="margin:0 0 28px 0;"></div>
       <p class="fade-up fade-up-delay-3" style="font-size:0.87rem;line-height:1.9;color:rgba(232,224,208,0.55);margin-bottom:32px;">
         투명한 기준, 고정된 비용으로<br>
@@ -1108,12 +1372,11 @@ footer {
         <span class="gold-text">Black</span><br>
       </h2>
       <span class="plan-price fade-up fade-up-delay-2">₩15,000,000</span>
-      <span class="plan-price-label fade-up fade-up-delay-2">/ 월정액 · VAT 별도</span>
-      <span class="plan-price-label fade-up fade-up-delay-2">/ 법인 비용처리 가능 · VAT 리베이트 가능</span>
+      <span class="plan-price-label fade-up fade-up-delay-2">/ 월정액 · VAT 별도 · VAT 리에비트 가능 · 법인 비용처리 가능</span>
       <div class="gold-divider-sm" style="margin:0 0 28px 0;"></div>
       <p class="fade-up fade-up-delay-3" style="font-size:0.87rem;line-height:1.9;color:rgba(232,224,208,0.55);margin-bottom:32px;">
         완전히 다른 차원의 프라이빗 경험.<br>
-        선택받은 이들만을 위한, 진짜 VIP.
+        선택받은 이들만을 위한, 진정한 프리미엄.
       </p>
       <a href="#final-cta" class="btn-gold fade-up fade-up-delay-4">Black 상담받기</a>
     </div>
@@ -1145,7 +1408,7 @@ footer {
           <div class="plan-service-dot"></div>
           <div>
             <div class="plan-service-title">프라이빗 라운딩</div>
-            <div class="plan-service-desc">멤버 전용, 인원 제한, 사전 공지 기반의 엄선된 사교 모임. 강남의 진짜 네트워크로 연결됩니다.</div>
+            <div class="plan-service-desc">가능 범위 내에서 우선 예약권 및 우선 좌석 배정이 제공됩니다. 대기 없이, 원하는 자리에서.</div>
           </div>
         </div>
       </div>
@@ -1166,7 +1429,7 @@ footer {
     <span class="section-label fade-up">How It Works</span>
     <h2 class="section-title fade-up fade-up-delay-1">이용 <span class="gold-text">절차</span></h2>
     <div class="gold-divider-sm fade-in"></div>
-    <p class="section-sub fade-up fade-up-delay-2">간단하고 명확한 4단계로 강남 도깨비 멤버십이 시작됩니다.</p>
+    <p class="section-sub fade-up fade-up-delay-2">간단하고 명확한 4단계로 멤버십이 시작됩니다.</p>
   </div>
 
   <div class="steps-wrap">
@@ -1226,7 +1489,7 @@ footer {
     <span class="section-label fade-up">Our Promise</span>
     <h2 class="section-title fade-up fade-up-delay-1">투명성이 곧 <span class="gold-text">품격</span></h2>
     <div class="gold-divider-sm fade-in"></div>
-    <p class="section-sub fade-up fade-up-delay-2">강남 도깨비의 4가지 투명성 약속</p>
+    <p class="section-sub fade-up fade-up-delay-2">4가지 투명성 약속</p>
   </div>
 
   <div class="transparency-grid">
@@ -1316,7 +1579,7 @@ footer {
   <div class="star-field" id="ctaStars"></div>
 
   <div class="final-cta-inner">
-    <span class="final-cta-label fade-up">Gangnam Dokkaebi · Premium Membership</span>
+    <span class="final-cta-label fade-up">The Standard OfGangnam · Premium Membership</span>
 
     <div class="deco-line-set fade-in" style="margin-bottom:40px">
       <div class="deco-line"></div>
@@ -1350,7 +1613,7 @@ footer {
     </h2>
 
     <p class="final-cta-sub fade-up fade-up-delay-1">
-      강남 도깨비가 이제는 답입니다.
+      강남 쩜오가 이제는 답입니다.
     </p>
 
     <div class="final-cta-buttons fade-up fade-up-delay-2">
@@ -1367,9 +1630,9 @@ footer {
 
 <!-- FOOTER -->
 <footer>
-  <span class="footer-logo">GANGNAM DOKKAEBI</span>
+  <span class="footer-logo">STANDARD OF GANGNAM</span>
   <div class="gold-divider-sm"></div>
-  <p class="footer-text">© 2025 강남 도깨비 프리미엄 멤버십. All Rights Reserved.</p>
+  <p class="footer-text">© 2026 강남 프리미엄 멤버십. All Rights Reserved.</p>
 </footer>
 
 <!-- ===== JAVASCRIPT ===== -->
